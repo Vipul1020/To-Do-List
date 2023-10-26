@@ -1,0 +1,104 @@
+body{
+    background-image: url(backwall.jpg);
+    display: grid;
+    align-items:center;
+    justify-content: center;
+}
+h1{
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration-line: underline;
+}
+
+h3{
+    color: white;
+    font-family: sans-serif;
+}
+
+.box{
+  background-color:transparent;
+  background: rgba(255, 0, 0, 0.4);
+  height: 800px;
+  width: 500px;
+  border-radius: 5%;
+}
+.navlinks{
+    display: flex;
+    align-items: start;
+    font-style:oblique;
+}
+.content{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-button {
+      
+    height: 50px;
+    width: 200px;
+
+    --c:  #f67280; 
+    
+    box-shadow: 0 0 0 .1em inset var(--c); 
+    --_g: linear-gradient(var(--c) 0 0) no-repeat;
+    background: 
+      var(--_g) calc(var(--_p,0%) - 100%) 0%,
+      var(--_g) calc(200% - var(--_p,0%)) 0%,
+      var(--_g) calc(var(--_p,0%) - 100%) 100%,
+      var(--_g) calc(200% - var(--_p,0%)) 100%;
+    background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+    outline-offset: .1em;
+    transition: background-size .4s, background-position 0s .4s;
+  }
+  button:hover {
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
+  }
+  button:active {
+    box-shadow: 0 0 9e9q inset #0009; 
+    background-color: var(--c);
+    color: #fff;
+  }
+  .adder{
+        background-color:midnightblue;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-family: sans-serif;
+      }
+      
+      .remover{
+        background-color: red;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-family: sans-serif;
+      }
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#textbox{
+    border-radius: 5%;
+    height: 40px;
+
+}

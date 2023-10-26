@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body class="container">
+
+  <nav class="navlinks">
+    <a href="/today"><ul><button class="title-button">Today</ul></button></a>
+    <a href="/work"><ul><button class="title-button">Work</ul></button></a>
+</nav>
+
+  <div class="box">
+    <div class="content">
+    <h1>To Do List</h1>
+
+    <div class="header">
+    <h2><%= moment().format('Do MMMM, YYYY')  %></h2>
+    </div>
+     
+    <div class="form">
+    <form action ="/addtask" method="POST">
+        <input type="text" id="textbox" name="newtask"><button class="adder"> Add Task </button>
+    <h3> Added Task </h3>
+   <% for( var i = 0; i < task.length; i++){ %>
+  <ul><input type="checkbox" name="check" value="<%= task[i] %>" /> <%= task[i] %> </ul>
+   <% } %>
+    <button class="remover" formaction="/removetask" type="submit"> Remove </button>
+ </form>
+    </div>
+   <h3> Completed task </h3>
+   <% for(var i = 0; i < complete.length; i++){ %>
+    <ul><input type="checkbox" checked><%= complete[i] %> </ul>
+<% } %>
+</div>
+</div>
+  </div>
+</body>
+</html>
